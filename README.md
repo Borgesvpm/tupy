@@ -27,6 +27,19 @@ print(z)
 5
 ```
 
+```python
+def gen(n):
+   for i in range(n):
+      yield i
+      yield from gen(i)
+
+print(list(gen(3)))
+```
+
+```shell
+[0, 1, 0, 2, 0, 1, 0]
+```
+
 Segue meu exemplo favorito:
 
 ```python
